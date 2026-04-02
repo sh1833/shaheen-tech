@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Shaheen Tech — Digital Engineering Studio | Coventry, UK</title>
-<meta name="description" content="Shaheen Tech is a UK-based digital engineering studio offering web & mobile development, UI/UX design, e-commerce, AI integrations, and SEO. Based in Coventry. Built to fly."/>
+<title>Shaheen Tech — Digital Engineering Studio | Canterbury, Kent, UK</title>
+<meta name="description" content="Shaheen Tech is a UK-based digital engineering studio offering web & mobile development, UI/UX design, e-commerce, AI integrations, and SEO. Based in Canterbury, Kent. Built to fly."/>
 <meta name="author" content="Shaheen Tech Ltd"/>
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://shaheentech.co.uk/"/>
@@ -242,6 +242,30 @@ footer{padding:60px 0 36px;border-top:1px solid var(--border);background:var(--b
 .skill-item{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted2);}
 .skill-item::before{content:'›';color:var(--accent);font-size:16px;}
 
+/* ── EMAIL POPUP BUTTON ── */
+.email-fab{position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:300;background:var(--accent);border:none;cursor:pointer;display:flex;align-items:center;gap:10px;padding:14px 18px 14px 16px;box-shadow:-4px 0 24px rgba(0,229,255,0.3);transition:padding 0.2s,box-shadow 0.2s;border-radius:8px 0 0 8px;}
+.email-fab:hover{padding:14px 22px 14px 20px;box-shadow:-6px 0 32px rgba(0,229,255,0.5);}
+.email-fab svg{width:22px;height:22px;fill:var(--bg);flex-shrink:0;}
+.email-fab-label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--bg);white-space:nowrap;}
+/* ── EMAIL MODAL ── */
+.email-modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:400;align-items:center;justify-content:center;padding:20px;}
+.email-modal-overlay.open{display:flex;}
+.email-modal{background:var(--bg2);border:1px solid var(--border-bright);padding:48px 44px;max-width:500px;width:100%;position:relative;animation:fadeUp 0.3s ease both;}
+.email-modal-close{position:absolute;top:16px;right:20px;background:none;border:none;color:var(--muted2);font-size:22px;cursor:pointer;font-family:var(--font-mono);transition:color 0.2s;}
+.email-modal-close:hover{color:var(--accent);}
+.email-modal-title{font-family:var(--font-head);font-size:26px;font-weight:800;letter-spacing:-0.5px;margin-bottom:8px;}
+.email-modal-sub{color:var(--muted2);font-size:13px;line-height:1.8;margin-bottom:28px;}
+.email-modal-link{display:flex;align-items:center;gap:14px;background:var(--bg3);border:1px solid var(--border-bright);padding:18px 20px;margin-bottom:14px;transition:border-color 0.2s;cursor:pointer;text-decoration:none;}
+.email-modal-link:hover{border-color:var(--accent);}
+.email-modal-link-icon{color:var(--accent);font-size:20px;flex-shrink:0;}
+.email-modal-link-label{font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:3px;}
+.email-modal-link-val{font-size:13px;color:var(--text);}
+.email-modal-or{text-align:center;font-size:11px;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;margin:20px 0;}
+/* ── SOCIAL ICONS ── */
+.social-icons{display:flex;gap:14px;align-items:center;}
+.social-icon{width:40px;height:40px;border:1px solid var(--border-bright);display:flex;align-items:center;justify-content:center;color:var(--muted2);transition:border-color 0.2s,color 0.2s;text-decoration:none;}
+.social-icon:hover{border-color:var(--accent);color:var(--accent);}
+.social-icon svg{width:18px;height:18px;fill:currentColor;}
 /* ── REVEAL ── */
 .reveal{opacity:0;transform:translateY(28px);transition:opacity 0.7s ease,transform 0.7s ease;}
 .reveal.visible{opacity:1;transform:translateY(0);}
@@ -333,7 +357,7 @@ footer{padding:60px 0 36px;border-top:1px solid var(--border);background:var(--b
   <section class="hero">
     <div class="hero-glow"></div>
     <div class="hero-glow2"></div>
-    <div class="hero-tag">UK-based digital engineering studio</div>
+    <div class="hero-tag">Canterbury, Kent · Digital Engineering Studio</div>
     <h1 class="hero-h1">
       <span class="line1">We build</span><br/>
       <span class="line2">fast, sharp</span><br/>
@@ -655,13 +679,13 @@ footer{padding:60px 0 36px;border-top:1px solid var(--border);background:var(--b
               </svg>
             </div>
           </div>
-          <div class="about-corner tl">est. 2025 · coventry, uk</div>
+          <div class="about-corner tl">est. 2025 · canterbury, kent</div>
           <div class="about-corner br">shaheen — the falcon</div>
         </div>
         <div>
           <div class="section-label left reveal">The studio</div>
           <h2 class="about-name reveal" style="text-align:left;">Shaheen Tech</h2>
-          <div class="about-role reveal">Digital Engineering Studio · Coventry, UK</div>
+          <div class="about-role reveal">Digital Engineering Studio · Canterbury, Kent, UK</div>
           <p class="about-text reveal">Shaheen Tech is a UK-based digital engineering studio specialising in web and mobile development, UI/UX design, e-commerce, and AI integrations. We work with startups and established businesses across the UK who want to build products that actually perform.<br/><br/>Our approach combines strategic thinking with sharp design and clean, performant code. Every project is delivered with the same commitment to quality, transparency, and results.<br/><br/>The name Shaheen means falcon — fast, precise, and built to soar. That's the standard we hold every project to.</p>
           <div class="skills-list reveal">
             <div class="skill-item">React / Next.js</div><div class="skill-item">React Native</div>
@@ -698,15 +722,15 @@ footer{padding:60px 0 36px;border-top:1px solid var(--border);background:var(--b
               <select class="form-select" name="service"><option value="">Select a service...</option><option>Web & Mobile Development</option><option>UI/UX Design</option><option>E-commerce Development</option><option>AI & Automation</option><option>SEO & Performance</option><option>Maintenance & Support</option><option>Not sure yet</option></select>
             </div>
             <div class="form-group"><label class="form-label">Tell us about your project</label><textarea class="form-textarea" name="message" placeholder="What are you building? What's the budget and timeline?"></textarea></div>
-            <div class="form-error" id="form-error">Something went wrong — email us at hello@shaheentech.co.uk</div>
+            <div class="form-error" id="form-error">Something went wrong — email us at <a href="mailto:contact@shaheentech.co.uk">contact@shaheentech.co.uk</a></div>
             <button type="submit" class="form-submit" id="form-btn">Send message →</button>
             <div class="form-success" id="form-success">✓ Message received — we'll be in touch within 24 hours.</div>
           </form>
           <div class="contact-alt reveal">
-            <a href="mailto:hello@shaheentech.co.uk" class="contact-link"><span class="contact-link-label">Email</span><span class="contact-link-val">hello@shaheentech.co.uk</span></a>
-            <a href="https://linkedin.com" class="contact-link" target="_blank"><span class="contact-link-label">LinkedIn</span><span class="contact-link-val">Shaheen Tech</span></a>
-            <a class="contact-link"><span class="contact-link-label">Based in</span><span class="contact-link-val">Coventry, UK</span></a>
-            <a class="contact-link"><span class="contact-link-label">Response</span><span class="contact-link-val">Within 24 hours</span></a>
+            <a href="mailto:contact@shaheentech.co.uk" class="contact-link"><span class="contact-link-label">Email</span><span class="contact-link-val">contact@shaheentech.co.uk</span></a>
+            <a class="contact-link"><span class="contact-link-label">Address</span><span class="contact-link-val">Canterbury, Kent, UK</span></a>
+            <a href="#" class="contact-link" onclick="showPage('privacy')"><span class="contact-link-label">Legal</span><span class="contact-link-val">Privacy Policy</span></a>
+            <a href="#" class="contact-link" onclick="showPage('terms')"><span class="contact-link-label">Legal</span><span class="contact-link-val">Terms of Service</span></a>
           </div>
         </div>
       </div>
@@ -727,9 +751,9 @@ footer{padding:60px 0 36px;border-top:1px solid var(--border);background:var(--b
         <p class="section-sub" style="margin-bottom:0;">Everything you need to know before getting started with Shaheen Tech.</p>
       </div>
       <div class="faq-list reveal">
-        <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span class="faq-q-text">How much does a project typically cost?</span><span class="faq-icon">+</span></div><div class="faq-answer">Pricing depends on scope, but as a guide: landing pages from £500, full web apps from £2,000, e-commerce stores from £1,500, and mobile apps from £3,500. Every project gets a fixed-price proposal upfront — no hourly billing surprises.</div></div>
-        <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span class="faq-q-text">How long does a project take?</span><span class="faq-icon">+</span></div><div class="faq-answer">A landing page or simple site: 1–2 weeks. A full web app or e-commerce build: 4–8 weeks. Mobile apps: 6–12 weeks. We'll give you a firm timeline in the proposal and stick to it.</div></div>
-        <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span class="faq-q-text">Do you work with clients outside of Coventry?</span><span class="faq-icon">+</span></div><div class="faq-answer">Absolutely — the majority of our clients are fully remote across the UK. We work over email and video calls, and you'll always know exactly what's happening with your project.</div></div>
+        <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span class="faq-q-text">How much does a project typically cost?</span><span class="faq-icon">+</span></div><div class="faq-answer">Every project is different, and so is the investment. We scope every project individually based on your requirements, goals, and timeline — ensuring you only pay for exactly what you need, nothing more. To get a clear, no-obligation quote tailored to your project, simply get in touch and we'll come back to you within 24 hours.</div></div>
+        <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span class="faq-q-text">How long does a project take?</span><span class="faq-icon">+</span></div><div class="faq-answer">We build around your timeline — not ours. Whether you're working to a tight launch date, an investor deadline, or a longer strategic rollout, we structure the project to fit. We are committed to delivering every project on time and ahead of schedule where possible. Deadlines are a commitment, not a suggestion.</div></div>
+        <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span class="faq-q-text">Do you work with clients outside of Canterbury?</span><span class="faq-icon">+</span></div><div class="faq-answer">Absolutely — we work with clients remotely across the whole of the UK. Everything is handled over email and video calls, and you'll always know exactly what's happening with your project.</div></div>
         <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span class="faq-q-text">What do you need from me to get started?</span><span class="faq-icon">+</span></div><div class="faq-answer">Just a rough brief — what you're building, who it's for, and what your budget and timeline look like. You don't need anything polished. We'll help shape the project from there.</div></div>
         <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span class="faq-q-text">Do you offer ongoing support after launch?</span><span class="faq-icon">+</span></div><div class="faq-answer">Yes — we offer monthly maintenance retainers covering updates, security patches, hosting management, and ongoing feature development. Retainers start from £200/month.</div></div>
         <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span class="faq-q-text">Will I own everything when it's done?</span><span class="faq-icon">+</span></div><div class="faq-answer">Yes. On final payment, all code, designs, and assets are fully yours. We hand over all source files, repo access, and credentials. No lock-in, ever.</div></div>
@@ -739,6 +763,52 @@ footer{padding:60px 0 36px;border-top:1px solid var(--border);background:var(--b
       <div style="text-align:center;margin-top:64px;padding-top:48px;border-top:1px solid var(--border);" class="reveal">
         <p style="color:var(--muted2);font-size:14px;margin-bottom:28px;">Still have questions? Just ask — we're happy to chat.</p>
         <button class="btn-primary" onclick="showPage('contact')">Get in touch</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══ PRIVACY PAGE ═══ -->
+<div class="page" id="page-privacy">
+  <div class="section-wrap" style="padding-top:0;">
+    <div class="container">
+      <div style="padding-top:140px;max-width:780px;margin:0 auto;">
+        <div class="section-label">Legal</div>
+        <h1 class="section-title" style="text-align:left;">Privacy Policy</h1>
+        <p style="color:var(--muted2);font-size:13px;margin-bottom:12px;letter-spacing:0.06em;">Last updated: January 2025</p>
+        <div style="color:var(--muted2);font-size:13px;line-height:2;display:flex;flex-direction:column;gap:28px;margin-top:40px;">
+          <div><h3 style="font-family:var(--font-head);font-size:18px;font-weight:700;color:var(--text);margin-bottom:10px;">1. Who we are</h3><p>Shaheen Tech Ltd is a digital engineering studio registered in England and Wales, operating from Canterbury, Kent. When you use our website or engage our services, we may collect and process personal data. This policy explains how.</p></div>
+          <div><h3 style="font-family:var(--font-head);font-size:18px;font-weight:700;color:var(--text);margin-bottom:10px;">2. Data we collect</h3><p>We may collect your name, email address, company name, and any information you provide via our contact form. We do not collect payment data directly — all payments are handled by secure third-party processors.</p></div>
+          <div><h3 style="font-family:var(--font-head);font-size:18px;font-weight:700;color:var(--text);margin-bottom:10px;">3. How we use your data</h3><p>We use your data solely to respond to your enquiry, deliver agreed services, and communicate project updates. We do not sell, rent, or share your personal data with third parties for marketing purposes.</p></div>
+          <div><h3 style="font-family:var(--font-head);font-size:18px;font-weight:700;color:var(--text);margin-bottom:10px;">4. Data retention</h3><p>We retain your data for as long as necessary to fulfil the purposes described above, or as required by law. You may request deletion of your data at any time by contacting us at <a href="mailto:contact@shaheentech.co.uk" style="color:var(--accent);">contact@shaheentech.co.uk</a>.</p></div>
+          <div><h3 style="font-family:var(--font-head);font-size:18px;font-weight:700;color:var(--text);margin-bottom:10px;">5. Your rights</h3><p>Under UK GDPR you have the right to access, correct, or delete your personal data, and the right to object to its processing. To exercise any of these rights, contact us at <a href="mailto:contact@shaheentech.co.uk" style="color:var(--accent);">contact@shaheentech.co.uk</a>.</p></div>
+          <div><h3 style="font-family:var(--font-head);font-size:18px;font-weight:700;color:var(--text);margin-bottom:10px;">6. Contact</h3><p>For any privacy-related queries, email us at <a href="mailto:contact@shaheentech.co.uk" style="color:var(--accent);">contact@shaheentech.co.uk</a>.</p></div>
+        </div>
+        <div style="margin-top:56px;padding-bottom:80px;"><button class="btn-ghost" onclick="showPage('contact')">← Back to contact</button></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ TERMS PAGE ═══ -->
+<div class="page" id="page-terms">
+  <div class="section-wrap" style="padding-top:0;">
+    <div class="container">
+      <div style="padding-top:140px;max-width:780px;margin:0 auto;">
+        <div class="section-label">Legal</div>
+        <h1 class="section-title" style="text-align:left;">Terms of Service</h1>
+        <p style="color:var(--muted2);font-size:13px;margin-bottom:12px;letter-spacing:0.06em;">Last updated: January 2025</p>
+        <div style="color:var(--muted2);font-size:13px;line-height:2;display:flex;flex-direction:column;gap:28px;margin-top:40px;">
+          <div><h3 style="font-family:var(--font-head);font-size:18px;font-weight:700;color:var(--text);margin-bottom:10px;">1. Agreement</h3><p>By engaging Shaheen Tech Ltd for services, you agree to these terms. Each project is governed by a separate project agreement which takes precedence over these general terms where applicable.</p></div>
+          <div><h3 style="font-family:var(--font-head);font-size:18px;font-weight:700;color:var(--text);margin-bottom:10px;">2. Services</h3><p>Shaheen Tech Ltd provides digital engineering services including web development, mobile development, UI/UX design, e-commerce development, AI integration, SEO, and ongoing maintenance. The scope of each engagement is defined in the project proposal.</p></div>
+          <div><h3 style="font-family:var(--font-head);font-size:18px;font-weight:700;color:var(--text);margin-bottom:10px;">3. Payment</h3><p>Payment terms are outlined in the project proposal. A deposit is required before work commences. Final payment is due upon project delivery. All fees are in GBP and exclusive of VAT where applicable.</p></div>
+          <div><h3 style="font-family:var(--font-head);font-size:18px;font-weight:700;color:var(--text);margin-bottom:10px;">4. Intellectual property</h3><p>Upon receipt of final payment, all intellectual property rights in the deliverables transfer to the client. Shaheen Tech Ltd retains the right to display the work in its portfolio unless otherwise agreed in writing.</p></div>
+          <div><h3 style="font-family:var(--font-head);font-size:18px;font-weight:700;color:var(--text);margin-bottom:10px;">5. Liability</h3><p>Shaheen Tech Ltd's total liability for any claim arising out of or in connection with a project shall not exceed the total fees paid by the client for that project.</p></div>
+          <div><h3 style="font-family:var(--font-head);font-size:18px;font-weight:700;color:var(--text);margin-bottom:10px;">6. Governing law</h3><p>These terms are governed by the laws of England and Wales. Any disputes shall be subject to the exclusive jurisdiction of the courts of England and Wales.</p></div>
+          <div><h3 style="font-family:var(--font-head);font-size:18px;font-weight:700;color:var(--text);margin-bottom:10px;">7. Contact</h3><p>For any queries about these terms, email us at <a href="mailto:contact@shaheentech.co.uk" style="color:var(--accent);">contact@shaheentech.co.uk</a>.</p></div>
+        </div>
+        <div style="margin-top:56px;padding-bottom:80px;"><button class="btn-ghost" onclick="showPage('contact')">← Back to contact</button></div>
       </div>
     </div>
   </div>
@@ -760,7 +830,7 @@ footer{padding:60px 0 36px;border-top:1px solid var(--border);background:var(--b
             <text x="91" y="60" font-family="JetBrains Mono,monospace" font-size="10.5" fill="#3a4a60" letter-spacing="0.26em">BUILT TO FLY.</text>
           </svg>
         </div>
-        <p>A UK-based digital engineering studio delivering high-performance web apps, mobile experiences, AI integrations, and e-commerce platforms. Based in Coventry.</p>
+        <p>A UK-based digital engineering studio delivering high-performance web apps, mobile experiences, AI integrations, and e-commerce platforms. Based in Canterbury, Kent.</p>
       </div>
       <div>
         <div class="footer-col-title">Services</div>
@@ -780,25 +850,62 @@ footer{padding:60px 0 36px;border-top:1px solid var(--border);background:var(--b
           <li><a onclick="showPage('work')">Our work</a></li>
           <li><a onclick="showPage('about')">About</a></li>
           <li><a onclick="showPage('faq')">FAQ</a></li>
+          <li><a onclick="showPage('privacy')">Privacy Policy</a></li>
+          <li><a onclick="showPage('terms')">Terms of Service</a></li>
         </ul>
       </div>
       <div>
         <div class="footer-col-title">Contact</div>
         <ul class="footer-links">
-          <li><a href="mailto:hello@shaheentech.co.uk">hello@shaheentech.co.uk</a></li>
+          <li><a href="mailto:contact@shaheentech.co.uk">contact@shaheentech.co.uk</a></li>
           <li><a onclick="showPage('contact')">Start a project</a></li>
           <li><a onclick="showPage('contact')">Get a quote</a></li>
-          <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
-          <li><a>Coventry, UK</a></li>
+          <li><a>Canterbury, Kent, UK</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <div class="footer-copy">© 2025 Shaheen Tech Ltd · Company registered in England & Wales · All rights reserved</div>
-      <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms</a></div>
+      <div class="social-icons">
+        <a class="social-icon" href="#" target="_blank" title="Facebook">
+          <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a class="social-icon" href="https://linkedin.com" target="_blank" title="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a class="social-icon" href="#" target="_blank" title="Instagram">
+          <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a class="social-icon" href="#" target="_blank" title="WhatsApp">
+          <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        </a>
+      </div>
     </div>
   </div>
 </footer>
+
+<!-- ═══ EMAIL POPUP BUTTON ═══ -->
+<button class="email-fab" onclick="openEmailModal()" title="Contact us">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="fill:none;stroke:var(--bg);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  <span class="email-fab-label">Chat with us</span>
+</button>
+
+<!-- ═══ EMAIL MODAL ═══ -->
+<div class="email-modal-overlay" id="email-modal-overlay" onclick="closeEmailModal(event)">
+  <div class="email-modal">
+    <button class="email-modal-close" onclick="closeEmailModal()">✕</button>
+    <div class="email-modal-title">Get in touch</div>
+    <p class="email-modal-sub">Drop us a message and we'll come back to you within 24 hours — no pressure, no obligation.</p>
+    <a class="email-modal-link" href="mailto:contact@shaheentech.co.uk">
+      <span class="email-modal-link-icon">
+        <svg viewBox="0 0 24 24" width="22" height="22" style="fill:none;stroke:var(--accent);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      </span>
+      <span><span class="email-modal-link-label">Email us directly</span><span class="email-modal-link-val">contact@shaheentech.co.uk</span></span>
+    </a>
+    <div class="email-modal-or">or</div>
+    <button class="btn-primary" style="width:100%;text-align:center;" onclick="closeEmailModal();showPage('contact')">Fill in our contact form →</button>
+  </div>
+</div>
 
 <script>
 // ── PAGE ROUTER ──
@@ -810,17 +917,12 @@ function showPage(id) {
   setTimeout(initReveal, 120);
   closeMobileNav();
 }
-
-function showService(id) {
-  showPage(id);
-}
+function showService(id) { showPage(id); }
 
 // ── MOBILE NAV ──
 function toggleMobileNav() {
-  const m = document.getElementById('nav-mobile');
-  const h = document.getElementById('hamburger');
-  m.classList.toggle('open');
-  h.classList.toggle('open');
+  document.getElementById('nav-mobile').classList.toggle('open');
+  document.getElementById('hamburger').classList.toggle('open');
 }
 function closeMobileNav() {
   document.getElementById('nav-mobile').classList.remove('open');
@@ -858,6 +960,23 @@ function toggleFaq(q) {
   if (!isOpen) { item.classList.add('open'); ans.classList.add('open'); }
 }
 
+// ── EMAIL MODAL ──
+function openEmailModal() {
+  document.getElementById('email-modal-overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeEmailModal(e) {
+  if (e && e.target !== document.getElementById('email-modal-overlay')) return;
+  document.getElementById('email-modal-overlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    document.getElementById('email-modal-overlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+});
+
 // ── CONTACT FORM ──
 const form = document.getElementById('contact-form');
 const btn  = document.getElementById('form-btn');
@@ -867,7 +986,7 @@ form.addEventListener('submit', async (e) => {
   e.preventDefault();
   if (form.action.includes('YOUR_FORM_ID')) {
     err.style.display = 'block';
-    err.textContent = 'Form not configured yet — email us at hello@shaheentech.co.uk';
+    err.textContent = 'Form not configured yet — email us at contact@shaheentech.co.uk';
     return;
   }
   btn.disabled = true; btn.textContent = 'Sending...'; err.style.display = 'none';
